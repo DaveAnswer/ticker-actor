@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import starter.service.TrackerService;
+import starter.service.TrackerApiService;
 
 @SpringBootApplication
 public class Starter implements CommandLineRunner {
 
     @Autowired
-    TrackerService trackerService;
+    TrackerApiService trackerApiService;
 
     public static void main(String[] args) {
         SpringApplication.run(Starter.class, args);
@@ -19,6 +19,6 @@ public class Starter implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        trackerService.getTicker();
+        trackerApiService.getTicker();
     }
 }
